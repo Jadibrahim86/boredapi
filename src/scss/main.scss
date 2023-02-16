@@ -1,0 +1,79 @@
+$backgroundcolor: rgb(139, 211, 235);
+@use"_index" as *;
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background:$backgroundcolor;
+
+  @media (max-width: 767px) {
+    padding: 10px;
+  }
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  div {
+    display: flex;
+    justify-content: center;
+  }
+  input {
+    font-size: large;
+  }
+
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  margin-right: 10px;
+  width: 50%;
+  max-width: 300px;
+
+  @media (max-width: 767px) {
+    width: 80%;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+
+button {
+@include buttonsrch;
+}
+
+#activity-details {
+  text-align: center;
+}
+
+#activity {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+div {
+  font-size: medium;
+  p {
+
+  }
+}
+
+@media (max-width: 767px) {
+  #controls {
+    align-items: center;
+    flex-direction: column;
+    button {
+      font-size: small;
+    }
+  }
+  
+}
